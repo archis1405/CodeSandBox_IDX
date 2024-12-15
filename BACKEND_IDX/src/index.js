@@ -9,7 +9,7 @@ app.use(express.urlencoded());
 app.use(cors());
 
 app.get('/ping' , (req,res) => {
-    return res.json({message: 'pong'});
+    return res.json({message: 'hello'});
 })
 
 app.listen(PORT, () => {
