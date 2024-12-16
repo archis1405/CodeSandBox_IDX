@@ -1,22 +1,18 @@
+import { useState } from 'react'
 import './App.css'
 import usePing from './hooks/apis/queries/usePing'
+import { PingComponent } from './components/atoms/pingComponent.';
 
 function App() {
 
-  const {isLoading , data} = usePing();
-
-  if(isLoading){
-    return(
-      <>
-        LOADING...... 
-      </>
-    )
-  }
-  return (
+  const[isVisible,setIsVisible] = useState(false);
+  return(
     <>
-      HELLO {data.message}
+      <button onClick={()=> setIsVisible(!isVisible)}>TOGGLE</button>
+      {isVisible && <PingComponent/>}
     </>
   )
+
 }
 
 export default App
