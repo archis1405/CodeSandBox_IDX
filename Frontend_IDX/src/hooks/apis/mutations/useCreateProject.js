@@ -20,7 +20,7 @@ export const useCreateProject = () => {
 
     return{
 
-        createProject: mutateAsync,
+        createProjectMutation: mutateAsync,
         isPending,
         isSuccess,
         error

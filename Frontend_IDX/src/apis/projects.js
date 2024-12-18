@@ -1,3 +1,5 @@
+import axios from '../config/axiosConfig.js';
+
 export const createProjectApi = async (project) => {
     try {
 

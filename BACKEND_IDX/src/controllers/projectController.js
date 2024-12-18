@@ -20,9 +20,10 @@ export const createProjectController = async (req,res) => {
 
     //After this call the npm create vite@latest in the newly created folder
 
-    const response = await execPromisified('npm create vite@latest codeGround -- --template react',{
-        cwd:`./projects/${projectId}`
-    });
+    const response = await execPromisified('npx create-vite@latest codeGround --template react', {
+        cwd: `./projects/${projectId}`
+      });
+      
 
     return res.json({ message: 'Project Created' , data : projectId});
 };
